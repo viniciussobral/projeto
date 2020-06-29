@@ -1,0 +1,49 @@
+<div class="container">
+  <menu>
+    <h2 id="titulo"></h2>
+    <ul>
+      <li>
+        <span>
+          <img src="/img/totem.png" />
+        </span>
+        <a id="link_maquina" href="">Maquinas</a>
+      </li>
+      <li>
+        <span>
+          <img src="/img/alert.png" />
+        </span>
+        <a id="link_maquina" href="">Alerta</a>
+      </li>
+      <li>
+        <span>
+          <img src="/img/logout.png" />
+        </span>
+        <a id="logout" href="">Sair</a>
+      </li>
+  </menu>
+  <main>
+    <div class="container-grafico">
+      <div class="grafico-destaque">
+        <h5 id="serialNumber-pico"></h5>
+        <canvas id="linha"></canvas>
+      </div>
+      <div class="dados-maquina">
+        <div class="grafico-maquina">
+          <h5 id="data-informacao"></h5>
+          <canvas id="donut"></canvas>
+        </div>
+        <div class="todos-serial">
+          <ol id="lista-serial-number">
+            <h3>Serial Number (Máquinas)</h3>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+<link rel="stylesheet" href="/css/style_grafico.css">
+<script src="https://js.api.here.com/v3/3.1/mapsjs-core.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://js.api.here.com/v3/3.1/mapsjs-service.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="/js/grafico.js"></script>

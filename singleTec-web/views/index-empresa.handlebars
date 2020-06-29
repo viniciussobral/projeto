@@ -1,0 +1,115 @@
+<div class="container">
+  <menu>
+    <h2 id="titulo"></h2>
+    <ul>
+      <li>
+        <span>
+          <img src="/img/user.png" />
+        </span>
+        <a id="cadfuncionario" href="">Funcionario</a>
+      </li>
+      <li>
+        <span>
+          <img src="/img/totem.png" />
+        </span>
+        <a href="/empresa/maquina">Máquina</a>
+      </li>
+      <li>
+        <span>
+          <img src="/img/telegram.png" />
+        </span>
+        <a id="btn_chatid" href="">chatID</a>
+      </li>
+      <li>
+        <span>
+          <img src="/img/settings.png" />
+        </span>
+        <a href="#">Configurações</a>
+      </li>
+      <li>
+        <span>
+          <img src="/img/interogation.png" />
+        </span>
+        <a href="#">Dúvidas</a>
+      </li>
+      <li>
+        <span>
+          <img src="/img/logout.png" />
+        </span>
+        <a id="logout" href="">Sair</a>
+      </li>
+  </menu>
+  <main>
+    <header>
+      <span class="container-pesquisa">
+        <input id="pesquisar" type="text" placeholder="Busque um funcionario aqui">
+        <img src="/img/icon-search.png">
+      </span>
+    </header>
+    <div class="container-funcionarios">
+      <h3>Colaboradores cadastrados</h3>
+      <table>
+        <thead>
+          <tr>
+            <td>IdFuncionario</td>
+            <td>Nome</td>
+            <td>Cargo</td>
+            <td>Função</td>
+            <td>E-mail</td>
+          </tr>
+        </thead>
+        <tbody>
+          {{!-- não apagar --}}
+        </tbody>
+      </table>
+    </div>
+    <div class="modal">
+      <span>Funcionario cadastrado!</span>
+    </div>
+    <div id="container-chatid" class="container-chatid">
+      <div class="chatid-modal">
+        <header>
+          Cadastre seu ID
+        </header>
+        <main>
+          <input id="meuChatId" placeholder="Digite o ID" type="text">
+          <button id="btn_cadastro_Chat">Confirmar</button>
+        </main>
+        <footer>
+          <button id="closeChat">Fechar</button>
+        </footer>
+      </div>
+    </div>
+  </main>
+  <div class="container-cadastrar-funcionario">
+    <div class="cadastrar-funcionario">
+      <header>
+        Cadastrar
+        <button id="close-modal-funcionario">X</button>
+      </header>
+      <form id="form-cadastro-funcionario">
+        <label>Nome</label>
+        <input id="nome" required type="text">
+        <label>Cargo</label>
+        <input id="cargo" required type="text">
+        <label>Tipo</label>
+        <select id="tipo" required>
+          <option value="operacional">Operacional</option>
+          <option value="administrador">Administrador</option>
+        </select>
+        <label>Email</label>
+        <input id="email" required type="email">
+        <label>Senha</label>
+        <input id="senha" required type="password">
+        <label>Contato</label>
+        <input id="contato" required type="text">
+        <span>
+          <button type="submit">Cadastrar</button>
+        </span>
+      </form>
+    </div>
+  </div>
+</div>
+<link rel="stylesheet" href="/css/tela-inicial-empresa.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.js"></script>
+<script src="/js/tela-inicial-empresa.js"></script>
